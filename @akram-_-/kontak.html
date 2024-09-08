@@ -77,8 +77,8 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Informasi</a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">FAQ</a>
-                                <a href="#" class="dropdown-item">Dokumentasi</a>
+                                <a href="faq.html" class="dropdown-item">FAQ</a>
+                                <a href="dok.html" class="dropdown-item">Dokumentasi</a>
                             </div>
                         </div>
                         <a href="#" class="nav-item nav-link active">Kontak</a>
@@ -120,7 +120,7 @@
                             <h2 class="mt-2">Jangan Ragu untuk Menghubungi Kami Jika Ada Pertanyaan</h2>
                         </div>
                         <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <form>
+                            <form id="contact-form">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
@@ -147,7 +147,18 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn w-100 py-3" type="submit" style="background-color: #197ee2; color: #ffffff;">Kirim Pesan</button>
+                                        <a href="#" id="send-button" style="
+                                            display: block;
+                                            width: 100%;
+                                            padding: 10px;
+                                            text-align: center;
+                                            background-color: #197ee2;
+                                            color: #ffffff;
+                                            text-decoration: none;
+                                            border-radius: 5px;
+                                            font-size: 16px;
+                                            
+                                        ">Kirim Pesan</a>
                                     </div>
                                 </div>
                             </form>
@@ -245,15 +256,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; 2024 <a class="border-bottom" href="#">LocalTechno</a> | All Right Reserved. 
+                            &copy; 2024 <a class="border-bottom" href="index.html">LocalTechno</a> | All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 						
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">FAQ</a>
-                                <a href="">Dokumentasi</a>
+                                <a href="faq.html">FAQ</a>
+                                <a href="dok.html">Dokumentasi</a>
                             </div>
                         </div>
                     </div>
@@ -294,6 +305,24 @@
           window.location.href = mailtoLink;
         }
       </script>
+
+
+<script>
+    document.getElementById('send-button').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        var name = encodeURIComponent(document.getElementById('name').value);
+        var email = encodeURIComponent(document.getElementById('email').value);
+        var subject = encodeURIComponent(document.getElementById('subject').value);
+        var message = encodeURIComponent(document.getElementById('message').value);
+
+        var whatsappMessage = `Nama: ${name}%0AEmail: ${email}%0APerihal: ${subject}%0APesan: ${message}`;
+        var whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
+
+        window.open(whatsappUrl, '_blank');
+    });
+</script>
+
 </body>
 
 </html>
