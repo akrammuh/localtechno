@@ -277,36 +277,38 @@ h6,
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;
+    font-size: 23px;
     width: 90px;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
-    background: url(../img/biru.png) center center no-repeat;
+    color: var(--primary);
+    background: url(../img/tes.png) center center no-repeat;
     transition: .5s;
 }
 
 .service-itemm .service-icon {
     margin: 0 auto 20px auto;
+    font-size: 15px;
     width: 90px;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
-    background: url(../img/biru.png) center center no-repeat;
+    color: var(--primary);
+    background: url(../img/robek.png) center center no-repeat;
     transition: .5s;
 }
 
 .service-item:hover .service-icon {
     color: var(--primary);
-    background: url(../img/putih.png);
+    background: url(../img/tes.png);
 }
 
 .service-itemm:hover .service-icon {
     color: var(--primary);
-    background: url(../img/putih.png);
+    background: url(../img/robek.png);
 }
 
 .service-item h5,

@@ -28,6 +28,46 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .border-red {
+    position: relative;  /* Membutuhkan posisi relatif untuk elemen teks di atas */
+    border: 2px solid #0d0242; /* Border merah dengan ketebalan 2px */
+    border-radius: 10px;  /* Radius sudut 10px */
+    padding: 10px;        /* Jarak antara border dan konten */
+    box-shadow: 0 0 10px #0d0242; /* Efek bayangan merah */
+}
+
+.ribbon {
+    position: absolute;  /* Posisi absolut untuk menempatkan teks di atas */
+    top: -30px;          /* Mengatur jarak dari atas */
+    left: 0;
+    right: 0;
+    text-align: center;  /* Pusatkan teks */
+    background-color: #0d0242; /* Warna latar belakang ribbon */
+    color: white;        /* Warna teks */
+    padding: 5px;        /* Jarak padding di sekitar teks */
+    border-radius: 10px 10px 10px 10px; /* Sudut melengkung di bawah */
+    font-weight: bold;   /* Membuat teks tebal */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek 3D */
+}
+
+.service-itemm {
+    position: relative; /* Posisi relatif untuk elemen di dalam kartu */
+}
+
+@media (max-width: 768px) {
+    .col-lg-4, .col-md-6 {
+        flex: 1 1 100%;
+        margin-bottom: 20px; /* Jarak antar kartu di layar kecil */
+    }
+
+    .service-itemm {
+        padding: 15px;
+        
+    }
+}
+
+    </style>
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -57,19 +97,19 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="#" class="nav-item nav-link" style="color: antiquewhite;">Beranda</a>
+                        <a href="index.html" class="nav-item nav-link">Beranda</a>
                         <a href="tentangkami.html" class="nav-item nav-link">Tentang Kami</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Layanan</a>
                             <div class="dropdown-menu m-0">
                                 <a href="gd.html" class="dropdown-item">Graphic Design</a>
                                 <a href="#" class="dropdown-item active">Web Development</a>
-                                <a href="ui/.html" class="dropdown-item">UI/UX (web design)</a>
-                                <a href="#" class="dropdown-item">Hardware Enginering</a>
-                                <a href="#" class="dropdown-item">IT Support dan Maintenance</a>
-                                <a href="#" class="dropdown-item">IOT</a>
-                                <a href="#" class="dropdown-item">Big Data dan Analyst</a>
-                                <a href="#" class="dropdown-item">Augmented Reality</a>
+                                <a href="ui.html" class="dropdown-item">UI/UX (web design)</a>
+                                <a href="hard.html" class="dropdown-item">Hardware Enginering</a>
+                                <a href="its.html" class="dropdown-item">IT Support dan Maintenance</a>
+                                <a href="iot.html" class="dropdown-item">IOT</a>
+                                <a href="bd.html" class="dropdown-item">Big Data dan Analyst</a>
+                                <a href="ar.html" class="dropdown-item">Augmented Reality</a>
                             </div>
                         </div>
                         <a href="portfolio.html" class="nav-item nav-link">Portfolio</a>
@@ -121,7 +161,7 @@
                         <div class="section-title position-relative mb-4 pb-2">
                             <h2 class="mt-2" style="color: #0d0242;">Web Development</h2>
                         </div>
-                        <p class="mb-4">Layanan pengembangan web yang menyeluruh, mencakup desain responsif, pengembangan fungsional, dan optimisasi performa. Membantu Anda membangun situs web yang menarik, cepat, dan mudah digunakan, memastikan pengalaman pengguna yang optimal dan hasil yang memukau.</p>
+                        <p class="mb-4">kata2............</p>
                         
                         <div class="d-flex align-items-center mt-4">
                             <a class="btn rounded-pill px-4 me-3" 
@@ -153,74 +193,77 @@
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa fa-briefcase fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Paket Bisnis</h5>
-                            <h5 class="mb-3">Rp. 25.000.000</h5>
+                            <h5 class="mb-3">Paket Basic</h5>
+                            <p>Cocok untuk ......</p><br>
+                            <p style="text-decoration: line-through; margin-bottom: 1rem;">Rp. 500.000</p>
+                            <h5 style="background-color: #0d0242; color: white; padding: 9px; border-radius: 50px;">DISKON 30%</h5>
+                            <h5 id="price" class="mb-3" style="padding: 5px; border-radius: 50px; transition: visibility 0.5s;">Rp. 350.000</h5><br>
                             <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
                             <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Free Domain .com/co.id/.id</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>5 Page + 1 Add On</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>SEO On-Page</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>free SSL (Security Socket Lay)</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Feature Button call To Action (Whatsapp dll)</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>1.5 Gb Space Hosting</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>3 Account Email Domain</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Free Revisi</p>
+                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
+                            <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
+                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
+                            <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
+                            
                             <a class="btn px-3 mt-auto mx-auto" 
-   href="https://wa.me/082341467159?text=Saya%20ingin%20konsultasi%20mengenai%20paket%20bisnis%20pembuatan%20website" 
-   target="_blank">
-   Pesan Sekarang
-</a>
-
+                               href="https://wa.me/082341467159?text=Saya%20ingin%20konsultasi%20mengenai%20paket%20bisnis%20desain%20grafis" 
+                               target="_blank">
+                               Pilih Paket
+                            </a>
                         </div>
                     </div>
                     
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                    
+                    <div class="col-lg-4 col-md-6 wow zoomIn border-red" data-wow-delay="0.3s">
+                        <div class="ribbon">
+                            <span>Paling Laris</span>
+                        </div>
                         <div class="service-itemm d-flex flex-column justify-content-center text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-briefcase fa-2x"></i>
+                                <i class="fa fa-cogs fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Paket Bisnis</h5>
-                            <h5 class="mb-3">Rp. 25.000.000</h5>
+                            <h5 class="mb-3">Paket Standard</h5>
+                            <p>Cocok untuk ......</p><br>
+                            <p style="text-decoration: line-through; margin-bottom: 1rem;">Rp. 500.000</p>
+                            <h5 style="background-color: #0d0242; color: white; padding: 9px; border-radius: 50px;">DISKON 30%</h5>
+                            <h5 id="pricee" class="mb-3" style="padding: 5px; border-radius: 50px; transition: visibility 0.5s;">Rp. 350.000</h5><br>
                             <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
                             <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Free Domain .com/co.id/.id</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>5 Page + 1 Add On</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>SEO On-Page</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>free SSL (Security Socket Lay)</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Feature Button call To Action (Whatsapp dll)</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>1.5 Gb Space Hosting</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>3 Account Email Domain</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Free Revisi</p>
+                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
+                            <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
+                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
+                            <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
                             <a class="btn px-3 mt-auto mx-auto" 
-   href="https://wa.me/082341467159?text=Saya%20ingin%20konsultasi%20mengenai%20paket%20bisnis%20pembuatan%20website" 
-   target="_blank">
-   Pesan Sekarang
-</a>
+                               href="https://wa.me/082341467159?text=Saya%20ingin%20konsultasi%20mengenai%20paket%20bisnis%20desain%20grafis" 
+                               target="_blank">
+                               Pilih Paket
+                            </a>
                         </div>
                     </div>
+                    
+                    
 
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
                         <div class="service-itemm d-flex flex-column justify-content-center text-center rounded">
                             <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-briefcase fa-2x"></i>
+                                <i class="fa fa-star fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">Paket Bisnis</h5>
-                            <h5 class="mb-3">Rp. 25.000.000</h5>
+                            <h5 class="mb-3">Paket Premium</h5>
+                            <p>Cocok untuk ......</p><br>
+                            <p style="text-decoration: line-through; margin-bottom: 1rem;">Rp. 500.000</p>
+                            <h5 style="background-color: #0d0242; color: white; padding: 9px; border-radius: 50px;">DISKON 30%</h5>
+                            <h5 id="priceee" class="mb-3" style="padding: 5px; border-radius: 50px; transition: visibility 0.5s;">Rp. 350.000</h5><br>
                             <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
                             <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Free Domain .com/co.id/.id</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>5 Page + 1 Add On</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>SEO On-Page</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>free SSL (Security Socket Lay)</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Feature Button call To Action (Whatsapp dll)</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>1.5 Gb Space Hosting</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>3 Account Email Domain</p>
-                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>Free Revisi</p>
+                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
+                            <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
+                            <p><i class="fa fa-check me-2" style="color: #15ce00;"></i>tes tes</p>
+                            <p><i class="fa fa-xmark me-2" style="color: #ff0000;"></i>tes tes</p>
                             <a class="btn px-3 mt-auto mx-auto" 
-   href="https://wa.me/082341467159?text=Saya%20ingin%20konsultasi%20mengenai%20paket%20bisnis%20pembuatan%20website" 
-   target="_blank">
-   Pesan Sekarang
-</a>
+                               href="https://wa.me/082341467159?text=Saya%20ingin%20konsultasi%20mengenai%20paket%20bisnis%20desain%20grafis" 
+                               target="_blank">
+                               Pilih Paket
+                            </a>
                         </div>
                     </div>
                     
@@ -367,6 +410,41 @@
           window.location.href = mailtoLink;
         }
       </script>
+      <script>
+        // Mengambil elemen dengan id 'price'
+        const priceElement = document.getElementById('price');
+        
+        // Mengatur interval untuk mengubah visibilitas setiap 1000ms (1 detik)
+        setInterval(() => {
+            // Mengubah visibilitas elemen
+            priceElement.style.visibility = (priceElement.style.visibility === 'hidden' ? 'visible' : 'hidden');
+        }, 1000);
+         // Waktu berkedip dalam milidetik (1000ms atau 1 detik)
+    </script>
+
+<script>
+    // Mengambil elemen dengan id 'price'
+    const priceeElement = document.getElementById('pricee');
+    
+    // Mengatur interval untuk mengubah visibilitas setiap 1000ms (1 detik)
+    setInterval(() => {
+        // Mengubah visibilitas elemen
+        priceeElement.style.visibility = (priceeElement.style.visibility === 'hidden' ? 'visible' : 'hidden');
+    }, 1000);
+     // Waktu berkedip dalam milidetik (1000ms atau 1 detik)
+</script>
+
+<script>
+    // Mengambil elemen dengan id 'price'
+    const priceeeElement = document.getElementById('priceee');
+    
+    // Mengatur interval untuk mengubah visibilitas setiap 1000ms (1 detik)
+    setInterval(() => {
+        // Mengubah visibilitas elemen
+        priceeeElement.style.visibility = (priceeeElement.style.visibility === 'hidden' ? 'visible' : 'hidden');
+    }, 1000);
+     // Waktu berkedip dalam milidetik (1000ms atau 1 detik)
+</script>
 </body>
 
 </html>
