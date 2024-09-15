@@ -427,6 +427,7 @@ h6,
 /*** Team ***/
 .team-item {
     position: relative;
+    overflow: hidden; /* Prevents overflow */
     transition: .5s;
     z-index: 1;
 }
@@ -457,6 +458,26 @@ h6,
 .team-item:hover h5,
 .team-item:hover small {
     color: var(--light);
+}
+
+.image-wrapper {
+    width: 100%; /* Ensure wrapper takes up full width */
+    overflow: hidden; /* Prevents image overflow */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
 
