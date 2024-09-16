@@ -251,7 +251,7 @@ h6,
 /*** Service ***/
 .service-item {
     position: relative;
-    height: 450px;
+    height: 500px;
     padding: 30px 25px;
     background: #FFFFFF;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
@@ -286,16 +286,23 @@ h6,
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;
-    font-size: 23px;
-    width: 90px;
-    height: 90px;
+    width: 170px; /* Lebar kontainer, sesuaikan sesuai kebutuhan */
+    height: 170px; /* Tinggi kontainer, sesuaikan sesuai kebutuhan */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    background: url(../img/tes.png) center center no-repeat;
+    background: none; /* Hilangkan background jika tidak diperlukan */
     transition: .5s;
 }
+
+.service-item .service-icon img {
+    max-width: 100%; /* Mengatur agar gambar tidak melebihi ukuran kontainer */
+    max-height: 100%; /* Mengatur agar gambar tidak melebihi ukuran kontainer */
+    width: auto; /* Menjaga proporsi gambar */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
+
 
 .service-itemmm .service-icon {
     margin: 0 auto 20px auto;
@@ -323,10 +330,6 @@ h6,
     transition: .5s;
 }
 
-.service-item:hover .service-icon {
-    color: var(--primary);
-    background: url(../img/tes.png);
-}
 
 .service-itemm:hover .service-icon {
     color: var(--primary);
