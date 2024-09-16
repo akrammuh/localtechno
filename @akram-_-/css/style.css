@@ -446,7 +446,37 @@ h6,
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item i {
-    color: var(--primary) !important;
+    color: var(--dark) !important;
+}
+
+.testimonial-item {
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan hitam */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border terang */
+}
+
+.quote-icon {
+    color: var(--dark); /* Warna biru untuk ikon kutipan */
+}
+
+/* Aturan spesifik untuk bintang rating */
+.testimonial-item .text-warning .fa-star,
+.testimonial-item .text-warning .fa-star-half-alt {
+    color: #ffd700 !important; /* Warna kuning untuk bintang dengan prioritas tinggi */
+}
+
+/* Aturan untuk ikon kutipan dalam carousel */
+.testimonial-carousel .owl-item.center .testimonial-item .quote-icon {
+    color: var(--dark) !important; /* Warna biru untuk ikon kutipan dalam carousel */
+}
+
+/* Mengatur warna bintang dalam carousel jika perlu */
+.testimonial-carousel .owl-item.center .testimonial-item .text-warning .fa-star,
+.testimonial-carousel .owl-item.center .testimonial-item .text-warning .fa-star-half-alt {
+    color: #ffd700 !important; /* Warna kuning untuk bintang dalam carousel */
+}
+
+.testimonial-item img {
+    border: 2px solid #fff; /* Border putih untuk gambar */
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item h6 {
