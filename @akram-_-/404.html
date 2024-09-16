@@ -28,46 +28,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .border-red {
-    position: relative;  /* Membutuhkan posisi relatif untuk elemen teks di atas */
-    border: 2px solid #0d0242; /* Border merah dengan ketebalan 2px */
-    border-radius: 10px;  /* Radius sudut 10px */
-    padding: 10px;        /* Jarak antara border dan konten */
-    box-shadow: 0 0 10px #0d0242; /* Efek bayangan merah */
-}
-
-.ribbon {
-    position: absolute;  /* Posisi absolut untuk menempatkan teks di atas */
-    top: -30px;          /* Mengatur jarak dari atas */
-    left: 0;
-    right: 0;
-    text-align: center;  /* Pusatkan teks */
-    background-color: #0d0242; /* Warna latar belakang ribbon */
-    color: white;        /* Warna teks */
-    padding: 5px;        /* Jarak padding di sekitar teks */
-    border-radius: 10px 10px 10px 10px; /* Sudut melengkung di bawah */
-    font-weight: bold;   /* Membuat teks tebal */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek 3D */
-}
-
-.service-itemm {
-    position: relative; /* Posisi relatif untuk elemen di dalam kartu */
-}
-
-@media (max-width: 768px) {
-    .col-lg-4, .col-md-6 {
-        flex: 1 1 100%;
-        margin-bottom: 20px; /* Jarak antar kartu di layar kecil */
-    }
-
-    .service-itemm {
-        padding: 15px;
-        
-    }
-}
-
-    </style>
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -77,7 +37,7 @@
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow " style="width: 3rem; height: 3rem;" role="status">
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
@@ -100,7 +60,7 @@
                         <a href="index.html" class="nav-item nav-link">Beranda</a>
                         <a href="tentangkami.html" class="nav-item nav-link">Tentang Kami</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Layanan</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
                             <div class="dropdown-menu m-0">
                                 <a href="gd.html" class="dropdown-item">Graphic Design</a>
                                 <a href="wd.html" class="dropdown-item">Web Development</a>
@@ -110,7 +70,7 @@
                                 <a href="iot.html" class="dropdown-item">IOT</a>
                                 <a href="bd.html" class="dropdown-item">Big Data dan Analyst</a>
                                 <a href="ar.html" class="dropdown-item">Augmented Reality</a>
-                                <a href="#" class="dropdown-item active">Penulisan Proposal dan Tugas Akhir</a>
+                                <a href="ta.html" class="dropdown-item">Penulisan Proposal dan Tugas Akhir</a>
                                 <a href="ins.html" class="dropdown-item">Instalasi dan Pengelolaan Perkabelan</a>
                             </div>
                         </div>
@@ -123,11 +83,10 @@
                                 <a href="dok.html" class="dropdown-item">Dokumentasi</a>
                             </div>
                         </div>
-                        
-                        
-                        <a href="kontak.html" class="nav-item nav-link">Kontak</a>
+                        <a href="#" class="nav-item nav-link">Kontak</a>
                     </div>
-                    <a href="https://wa.me/6282341467159?text=Halo%20Kak,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20LocalTechno."  target="_blank"
+                    
+                    <a href="https://wa.me/6282341467159?text=Halo%20Kak,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20LocalTechno." target="_blank"
                     class="btn text-light rounded-pill py-2 px-4 ms-3" 
                     style="background-color: #0d0242;">
                     <i class="fab fa-whatsapp me-2"></i>Hubungi Kami
@@ -139,19 +98,17 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-12 text-center">
-                            <h1 class="text-white animated zoomIn">Layanan Kami</h1>
+                            <h1 class="text-white animated zoomIn">404 Not Found</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a class="text-white" href="#">Penulisan Proposal dan Tugas Akhir</a></li>
-                                </ol>
-                            </nav>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Navbar & Hero End -->
+
+
 
 
 
@@ -172,8 +129,6 @@
             </div>
         </div>
         <!-- 404 End -->
-
-        
         
 
         <!-- Footer Start -->
@@ -311,41 +266,24 @@
           window.location.href = mailtoLink;
         }
       </script>
-      <script>
-        // Mengambil elemen dengan id 'price'
-        const priceElement = document.getElementById('price');
-        
-        // Mengatur interval untuk mengubah visibilitas setiap 1000ms (1 detik)
-        setInterval(() => {
-            // Mengubah visibilitas elemen
-            priceElement.style.visibility = (priceElement.style.visibility === 'hidden' ? 'visible' : 'hidden');
-        }, 1000);
-         // Waktu berkedip dalam milidetik (1000ms atau 1 detik)
-    </script>
+
 
 <script>
-    // Mengambil elemen dengan id 'price'
-    const priceeElement = document.getElementById('pricee');
-    
-    // Mengatur interval untuk mengubah visibilitas setiap 1000ms (1 detik)
-    setInterval(() => {
-        // Mengubah visibilitas elemen
-        priceeElement.style.visibility = (priceeElement.style.visibility === 'hidden' ? 'visible' : 'hidden');
-    }, 1000);
-     // Waktu berkedip dalam milidetik (1000ms atau 1 detik)
+    document.getElementById('send-button').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        var name = encodeURIComponent(document.getElementById('name').value);
+        var email = encodeURIComponent(document.getElementById('email').value);
+        var subject = encodeURIComponent(document.getElementById('subject').value);
+        var message = encodeURIComponent(document.getElementById('message').value);
+
+        var whatsappMessage = `Nama: ${name}%0AEmail: ${email}%0APerihal: ${subject}%0APesan: ${message}`;
+        var whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
+
+        window.open(whatsappUrl, '_blank');
+    });
 </script>
 
-<script>
-    // Mengambil elemen dengan id 'price'
-    const priceeeElement = document.getElementById('priceee');
-    
-    // Mengatur interval untuk mengubah visibilitas setiap 1000ms (1 detik)
-    setInterval(() => {
-        // Mengubah visibilitas elemen
-        priceeeElement.style.visibility = (priceeeElement.style.visibility === 'hidden' ? 'visible' : 'hidden');
-    }, 1000);
-     // Waktu berkedip dalam milidetik (1000ms atau 1 detik)
-</script>
 </body>
 
 </html>
