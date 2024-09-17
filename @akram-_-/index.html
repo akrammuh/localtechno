@@ -93,7 +93,7 @@
                     <a href="https://wa.me/6282341467159?text=Halo%20Kak,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20LocalTechno." target="_blank"
                     class="btn text-light rounded-pill py-2 px-4 ms-3" 
                     style="background-color: #0d0242;">
-                    <i class="fab fa-whatsapp me-2"></i>Hubungi Kami
+                    <i class="fas fa-user-plus me-2"></i>Bergabung Sekarang
                  </a>
                  
 
@@ -760,7 +760,259 @@
 
 
 
-        
+        <!-- Button to open chat -->
+<div id="open-chat">
+    <i class="fab fa-whatsapp"></i>
+</div>
+
+<!-- Chat Widget -->
+<div id="chat-widget">
+    <div id="chat-header">
+        <img id="profile-pic" src="img/sayaa.jpg" alt="Profile">
+        <div id="header-info">
+            <span>Muh. Akram -_-</span>
+            <span class="status">Admin LocalTechno</span> <!-- Status terakhir dilihat -->
+        </div>
+        <span class="close-btn" onclick="closeChat()">×</span>
+    </div>
+    <div id="chat-body">
+        <!-- Pesan dari admin -->
+        <div class="message-container">
+            <p class="admin">Halo, Kak! Ada yang bisa kami bantu?</p>
+        </div>
+    </div>
+    <div id="chat-input">
+        <input type="text" id="chat-text" placeholder="Ketik pesan">
+        <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<script>
+    function toggleChat() {
+        var chatWidget = document.getElementById('chat-widget');
+        var openChat = document.getElementById('open-chat');
+        if (chatWidget.style.display === 'none' || chatWidget.style.display === '') {
+            chatWidget.style.display = 'flex';
+            openChat.style.display = 'none'; // Hide WhatsApp button
+            document.getElementById('chat-text').focus();
+        } else {
+            chatWidget.style.display = 'none';
+            openChat.style.display = 'flex'; // Show WhatsApp button
+        }
+    }
+
+    function closeChat() {
+        var chatWidget = document.getElementById('chat-widget');
+        var openChat = document.getElementById('open-chat');
+        chatWidget.style.display = 'none';
+        openChat.style.display = 'flex'; // Show WhatsApp button
+    }
+
+    document.getElementById('open-chat').addEventListener('click', toggleChat);
+    document.getElementById('send-message').addEventListener('click', function() {
+        var chatInput = document.getElementById('chat-text');
+        var message = chatInput.value.trim();
+        if (message) {
+            var encodedMessage = encodeURIComponent(message);
+            var whatsappUrl = `https://wa.me/082341467159?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+            chatInput.value = ''; // Clear input field
+        }
+    });
+
+    document.getElementById('chat-text').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('send-message').click();
+        }
+    });
+</script>
+
+<style>
+    /* Styling untuk chat widget */
+    @keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Menyusut sedikit ke atas */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+    #chat-widget {
+        position: fixed;
+        bottom: 30px; /* Jarak dari bawah layar */
+        right: 30px; /* Jarak dari sisi kanan layar */
+        width: 350px;
+        max-width: 90%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        height: 400px; /* Menurunkan tinggi default */
+        overflow: hidden;
+        z-index: 9999;
+        transition: height 0.3s ease;
+    }
+
+    #chat-header {
+        background-color: #25D366; /* WhatsApp green */
+        color: #ffffff;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+    }
+
+    #profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        margin-right: 10px;
+    }
+
+    #header-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header-info .status {
+        font-size: 12px;
+        color: #e0e0e0; /* Warna abu-abu untuk status terakhir dilihat */
+        margin-top: 3px; /* Spasi di atas status */
+    }
+
+    #chat-header .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #ffffff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    #chat-body {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background-color: #f0f0f0;
+    }
+
+    .message-container {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .message-container .sender-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: #25D366; /* Warna hijau WhatsApp */
+        margin-bottom: 2px; /* Spasi di bawah nama pengirim */
+    }
+
+    #chat-body .admin {
+        margin: 0;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        max-width: 80%;
+        word-wrap: break-word;
+        position: relative;
+    }
+
+    #chat-body .admin::before {
+        content: '';
+        position: absolute;
+        top: 10px; /* Jarak dari atas area pesan */
+        left: -8px; /* Jarak dari batas area chat */
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 15px solid #ffffff; /* Warna latar belakang pesan admin */
+        border-bottom: 10px solid transparent;
+    }
+
+    #chat-input {
+        border-top: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    #chat-input input {
+        flex: 1;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        margin-right: 10px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #chat-input button {
+        background-color: #25D366; /* WhatsApp green */
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        width: 40px; /* Menjadikan tombol lingkaran sempurna */
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #open-chat {
+        position: fixed;
+        bottom: 100px; /* Jarak dari bawah layar */
+        right: 35px; /* Jarak dari sisi kanan layar */
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        animation: floating 2s ease-in-out infinite; /* Menambahkan animasi floating */
+        width: 60px; /* Menetapkan lebar tombol */
+    height: 60px; /* Menetapkan tinggi tombol, sama dengan lebar untuk menjaga bentuk lingkaran */
+    }
+
+    #open-chat i {
+        color: #25D366; /* WhatsApp green */
+        font-size: 35px;
+    }
+    /* Gaya untuk area input pesan */
+#chat-input input {
+    flex: 1;
+    border: 2px solid #197ee2; /* Menetapkan warna border default */
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    outline: none; /* Menghilangkan border default saat focus */
+}
+
+/* Gaya untuk area input pesan saat focus */
+#chat-input input:focus {
+    border-color: #197ee2; /* Warna border saat input berada di focus */
+    box-shadow: 0 0 5px rgba(25, 126, 226, 0.5); /* Menambahkan efek glow saat focus */
+}
+
+</style>
+
 
 
 
