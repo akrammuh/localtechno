@@ -841,22 +841,43 @@
         transform: translateY(0);
     }
 }
-    #chat-widget {
-        position: fixed;
-        bottom: 30px; /* Jarak dari bawah layar */
-        right: 30px; /* Jarak dari sisi kanan layar */
-        width: 350px;
-        max-width: 90%;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: none;
-        flex-direction: column;
-        height: 300px; /* Menurunkan tinggi default */
-        overflow: hidden;
-        z-index: 9999;
-        transition: height 0.3s ease;
-    }
+
+#chat-widget {
+    position: fixed;
+    bottom: 30px; /* Jarak dari bawah layar */
+    right: 30px; /* Jarak dari sisi kanan layar */
+    width: 350px;
+    max-width: 90%;
+    background-image: url('img/doood.jpg'); /* Ganti dengan path ke gambar latar belakang */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    height: 300px;
+    overflow: hidden;
+    z-index: 9999;
+    transition: height 0.3s ease;
+}
+
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Membuat latar belakang transparan */
+    border-top: none; /* Menghapus border atas */
+}
+
+
 
     #chat-header {
         background-color: #25D366; /* WhatsApp green */
@@ -907,12 +928,8 @@
 }
 
 
-    #chat-body {
-        flex: 1;
-        padding: 10px;
-        overflow-y: auto;
-        background-color: #f0f0f0;
-    }
+
+
 
     .message-container {
         position: relative;
@@ -940,7 +957,7 @@
     #chat-body .admin::before {
         content: '';
         position: absolute;
-        top: 10px; /* Jarak dari atas area pesan */
+        top: 2px; /* Jarak dari atas area pesan */
         left: -8px; /* Jarak dari batas area chat */
         width: 0;
         height: 0;
@@ -949,14 +966,8 @@
         border-bottom: 10px solid transparent;
     }
 
-    #chat-input {
-        border-top: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 0 0 10px 10px;
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-    }
+   
+
 
     #chat-input input {
         flex: 1;
@@ -1019,6 +1030,8 @@
     border-color: #e0e0e0; /* Warna border saat input berada di focus */
     box-shadow: 0 0 5px rgba(137, 137, 138, 0.5); /* Menambahkan efek glow saat focus */
 }
+
+
 
 </style>
 
