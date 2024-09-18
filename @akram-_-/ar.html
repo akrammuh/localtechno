@@ -177,7 +177,7 @@
 
 
  <!-- Button to open chat -->
- <div id="open-chat">
+<div id="open-chat">
     <i class="fab fa-whatsapp"></i>
 </div>
 
@@ -192,11 +192,14 @@
         <span class="close-btn" onclick="closeChat()">×</span>
     </div>
     <div id="chat-body">
+        <!-- Teks tanggal -->
+        <div class="date-label">Hari ini</div>
         <!-- Pesan dari admin -->
         <div class="message-container">
             <p class="admin">Halo, Kak! Ada yang bisa kami bantu?</p>
         </div>
     </div>
+    
     <div id="chat-input">
         <input type="text" id="chat-text" placeholder="Ketik pesan">
         <button id="send-message"><i class="fas fa-paper-plane"></i></button>
@@ -257,22 +260,60 @@
         transform: translateY(0);
     }
 }
-    #chat-widget {
-        position: fixed;
-        bottom: 30px; /* Jarak dari bawah layar */
-        right: 30px; /* Jarak dari sisi kanan layar */
-        width: 350px;
-        max-width: 90%;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: none;
-        flex-direction: column;
-        height: 300px; /* Menurunkan tinggi default */
-        overflow: hidden;
-        z-index: 9999;
-        transition: height 0.3s ease;
-    }
+
+#chat-widget {
+    position: fixed;
+    bottom: 30px; /* Jarak dari bawah layar */
+    right: 30px; /* Jarak dari sisi kanan layar */
+    width: 350px;
+    max-width: 90%;
+    background-image: url('img/dd.png'); /* Ganti dengan path ke gambar latar belakang */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    height: 300px;
+    overflow: hidden;
+    z-index: 9999;
+    transition: height 0.3s ease;
+}
+
+.date-label {
+    text-align: center;
+    font-size: 10px; /* Ukuran teks */
+    color: #969090; /* Warna teks putih */
+    margin: 10px 0; /* Spasi di atas dan bawah */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    background-color: #ffffff; /* Warna latar belakang biru */
+    padding: 4px 5px; /* Spasi di dalam area teks */
+    border-radius: 7px; /* Sudut yang membulat */
+    display: inline-block; /* Agar latar belakang hanya sebesar teks */
+    position: relative; /* Agar dapat memposisikan dengan tepat */
+    left: 50%; /* Menggeser ke tengah */
+    transform: translateX(-50%); /* Menggeser kembali setengah lebar elemen */
+}
+
+
+
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Membuat latar belakang transparan */
+    border-top: none; /* Menghapus border atas */
+}
+
+
 
     #chat-header {
         background-color: #25D366; /* WhatsApp green */
@@ -323,12 +364,8 @@
 }
 
 
-    #chat-body {
-        flex: 1;
-        padding: 10px;
-        overflow-y: auto;
-        background-color: #f0f0f0;
-    }
+
+
 
     .message-container {
         position: relative;
@@ -356,7 +393,7 @@
     #chat-body .admin::before {
         content: '';
         position: absolute;
-        top: 10px; /* Jarak dari atas area pesan */
+        top: 0.9px; /* Jarak dari atas area pesan */
         left: -8px; /* Jarak dari batas area chat */
         width: 0;
         height: 0;
@@ -365,14 +402,8 @@
         border-bottom: 10px solid transparent;
     }
 
-    #chat-input {
-        border-top: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 0 0 10px 10px;
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-    }
+   
+
 
     #chat-input input {
         flex: 1;
@@ -436,8 +467,9 @@
     box-shadow: 0 0 5px rgba(137, 137, 138, 0.5); /* Menambahkan efek glow saat focus */
 }
 
-</style>
 
+
+</style>
 
         
 
