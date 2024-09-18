@@ -276,7 +276,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         display: none;
         flex-direction: column;
-        height: 400px; /* Menurunkan tinggi default */
+        height: 300px; /* Menurunkan tinggi default */
         overflow: hidden;
         z-index: 9999;
         transition: height 0.3s ease;
@@ -314,13 +314,22 @@
     }
 
     #chat-header .close-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        color: #ffffff;
-        font-size: 18px;
-        cursor: pointer;
-    }
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    width: 25px; /* Menetapkan lebar tombol lingkaran */
+    height: 25px; /* Menetapkan tinggi tombol lingkaran, sama dengan lebar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+    border: 2px solid #ffffff; /* Menambahkan border pada tombol */
+    background-color: rgba(0, 0, 0, 0.3); /* Warna latar belakang semi-transparan */
+}
+
 
     #chat-body {
         flex: 1;
@@ -421,7 +430,7 @@
     /* Gaya untuk area input pesan */
 #chat-input input {
     flex: 1;
-    border: 2px solid #197ee2; /* Menetapkan warna border default */
+    border: 2px solid #cacaca; /* Menetapkan warna border default */
     padding: 10px;
     border-radius: 20px;
     margin-right: 10px;
@@ -431,8 +440,8 @@
 
 /* Gaya untuk area input pesan saat focus */
 #chat-input input:focus {
-    border-color: #197ee2; /* Warna border saat input berada di focus */
-    box-shadow: 0 0 5px rgba(25, 126, 226, 0.5); /* Menambahkan efek glow saat focus */
+    border-color: #e0e0e0; /* Warna border saat input berada di focus */
+    box-shadow: 0 0 5px rgba(137, 137, 138, 0.5); /* Menambahkan efek glow saat focus */
 }
 
 </style>
