@@ -604,6 +604,7 @@
         max-width: 80%;
         word-wrap: break-word;
         position: relative;
+        font-size: 15px;
     }
 
     #chat-body .admin::before {
@@ -669,19 +670,21 @@
     /* Gaya untuk area input pesan */
 #chat-input input {
     flex: 1;
-    border: 2px solid #cacaca; /* Menetapkan warna border default */
-    padding: 10px;
+    border: 2px solid #cacaca; /* Warna border default */
+    padding: 8px; /* Kurangi padding */
     border-radius: 20px;
     margin-right: 10px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    outline: none; /* Menghilangkan border default saat focus */
+    outline: none; /* Hapus outline default saat fokus */
+    font-size: 15px; /* Sesuaikan ukuran font jika diperlukan */
 }
 
-/* Gaya untuk area input pesan saat focus */
+/* Sesuaikan gaya fokus sesuai kebutuhan */
 #chat-input input:focus {
-    border-color: #e0e0e0; /* Warna border saat input berada di focus */
-    box-shadow: 0 0 5px rgba(137, 137, 138, 0.5); /* Menambahkan efek glow saat focus */
+    border-color: #e0e0e0; /* Warna border saat fokus */
+    box-shadow: 0 0 5px rgba(137, 137, 138, 0.5); /* Efek glow saat fokus */
 }
+
 
 
 
