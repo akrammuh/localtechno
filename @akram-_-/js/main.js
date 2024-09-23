@@ -64,10 +64,9 @@ $(window).scroll(function () {
 });
 
 $('.back-to-top').click(function () {
-    $('html, body').scrollTop(0); // Langsung scroll ke atas
+    $('html, body').animate({scrollTop: 0}, 200); // Durasi 400 ms
     return false;
 });
-
 
 
  
