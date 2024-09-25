@@ -183,20 +183,59 @@ h6,
 
 /*** Hero Header ***/
 .hero-header {
-    background:
+    background:  
         url(../img/bg-dot.png),
         url(../img/bg-dot.png),
         url(../img/bg-round.png),
         url(../img/bg-tree.png),
-        url(../img/bg-bottom-hero.png);
+        url(../img/bg-bottom-hero.png); /* Gelombang putih */
+    
     background-position:
         10px 10px,
         bottom 190px right 10px,
         left 55% top -1px,
         left 45% bottom -1px,
-        center bottom -1px;
+        center bottom; /* Tetap di bagian bawah */
+    
     background-repeat: no-repeat;
+
+    /* Ukuran background, gunakan 'contain' untuk gelombang agar tetap proporsional */
+    background-size:
+        auto, /* Elemen dekoratif lainnya */
+        auto, /* Elemen dekoratif lainnya */
+        auto, /* Elemen dekoratif lainnya */
+        auto, /* Elemen dekoratif lainnya */
+        contain; /* Gelombang tetap proporsional, tidak membesar */
 }
+
+
+
+@media (max-width: 768px) {
+    .hero-header {
+        background-position:
+            10px 10px,
+            bottom 100px right 10px,
+            center top,
+            center bottom,
+            center bottom;
+
+        background-size:
+            auto,
+            auto,
+            auto,
+            auto,
+            contain; /* Gelombang tetap proporsional di perangkat kecil */
+    }
+}
+
+
+
+
+.container-fluid {
+    padding: 0; /* Pastikan tidak ada padding ekstra */
+    margin: 0;
+}
+
 
 
 /*** Section Title ***/
